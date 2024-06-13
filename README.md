@@ -1,8 +1,8 @@
-1. 상품(Product)이라는 부모 클래스를 생성하고, 자식 클래스로 의류(Clothing), 전자제품(Electronics), 식품(Food)을 생성할 것 (15점)
-    - Product 클래스는 상품명, 가격, 재고량 필드를 가지며 적절한 생성자와 getter, setter를 포함할 것
-    - 각 자식 클래스는 Product를 상속받고 독자적인 필드를 추가할 것 (Clothing-사이즈, Electronics-브랜드, Food-유통기한)
+1. 상품(product.Product)이라는 부모 클래스를 생성하고, 자식 클래스로 의류(product.Clothing), 전자제품(product.Electronics), 식품(product.Food)을 생성할 것 (15점)
+    - product.Product 클래스는 상품명, 가격, 재고량 필드를 가지며 적절한 생성자와 getter, setter를 포함할 것
+    - 각 자식 클래스는 Product를 상속받고 독자적인 필드를 추가할 것 (product.Clothing-사이즈, product.Electronics-브랜드, product.Food-유통기한)
 2. 각 자식 클래스의 생성자에서는 부모 생성자를 호출하여 상품명, 가격, 재고량을 설정하고, 자식 클래스의 독자적인 필드도 설정할 수 있도록 할 것 (15점)
-3. Product 클래스에 가격을 계산하는 calculatePrice() 메소드를 생성하고, 자식 클래스에서 이를 오버라이딩 할 것 (15점)
+3. product.Product 클래스에 가격을 계산하는 calculatePrice() 메소드를 생성하고, 자식 클래스에서 이를 오버라이딩 할 것 (15점)
     - Product의 calculatePrice()는 가격을 그대로 리턴함
     - Clothing의 calculatePrice()는 사이즈가 "L" 이상이면 가격에 10%를 추가함
     - Electronics의 calculatePrice()는 브랜드가 "Apple"이면 가격에 20%를 추가함

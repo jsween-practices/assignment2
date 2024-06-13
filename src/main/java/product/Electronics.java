@@ -1,3 +1,5 @@
+package product;
+
 public class Electronics extends Product {
 
   private final Brand brand;
@@ -16,7 +18,7 @@ public class Electronics extends Product {
   }
 
   public enum Brand {
-    APPLE, SAMSUNG, LG
+    APPLE, OTHER
   }
 
 }

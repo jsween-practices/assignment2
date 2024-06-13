@@ -1,3 +1,5 @@
+package product;
+
 public class Clothing extends Product {
 
   private final Size size;
