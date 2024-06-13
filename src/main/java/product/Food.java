@@ -1,12 +1,14 @@
 package product;
 
+import java.time.LocalDate;
+
 public class Food extends Product {
 
   private ExpirationDate expirationDate;
 
-  public Food(String name, int price, int stock, ExpirationDate expirationDate) {
+  public Food(String name, int price, int stock, LocalDate expirationDate) {
     super(name, price, stock);
-    this.expirationDate = expirationDate;
+    this.expirationDate = new ExpirationDate(expirationDate);
   }
 
   @Override

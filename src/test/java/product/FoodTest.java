@@ -13,14 +13,14 @@ class FoodTest {
   @DisplayName("유통기한 7일 초과")
   void calculatePrice() {
     LocalDate now = LocalDate.now();
-    Food out = new Food("out", 100, 2, new ExpirationDate(now.plus(Period.ofDays(8))));
+    Food out = new Food("out", 100, 2, now.plus(Period.ofDays(8)));
     assertEquals(out.calculatePrice(), 200);
   }
   @Test
   @DisplayName("유통기한 7일 이하")
   void calculatePricein() {
     LocalDate now = LocalDate.now();
-    Food out = new Food("out", 100, 2, new ExpirationDate(now.plus(Period.ofDays(6))));
+    Food out = new Food("out", 100, 2, now.plus(Period.ofDays(6)));
     assertEquals(out.calculatePrice(), 160);
   }
 }

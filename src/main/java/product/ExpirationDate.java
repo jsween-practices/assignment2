@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
-public class ExpirationDate {
+class ExpirationDate {
   static private final int EXPIRATION_DURATION = 7;
   private final LocalDate date;
 

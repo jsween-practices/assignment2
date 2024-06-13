@@ -1,6 +1,6 @@
 package product;
 
-public class Price {
+class Price {
   private int price;
 
   public Price(int price) {
@@ -13,5 +13,10 @@ public class Price {
 
   public int multiply(int stock) {
     return price * stock;
+  }
+
+  @Override
+  public String toString() {
+    return ""+price;
   }
 }

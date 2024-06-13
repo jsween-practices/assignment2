@@ -1,9 +1,12 @@
 package product;
 
+import java.util.Objects;
+
 public class Product {
-  private String name;
-  protected Price price;
-  protected int stock;
+
+  private final String name;
+  protected final Price price;
+  protected final Integer stock;
 
   public Product(String name, int price, int stock) {
     this.name = name;
@@ -11,7 +14,37 @@ public class Product {
     this.stock = stock;
   }
 
+  public Product(String name) {
+    this.name = name;
+    price = new Price(0);
+    stock = 0;
+  }
+
   public int calculatePrice() {
     return price.multiply(stock);
+  }
+
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null) {
+      return false;
+    }
+    if (o instanceof Product product) {
+      return Objects.equals(name, product.name);
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(name);
+  }
+
+  @Override
+  public String toString() {
+    return "============\n" + "이름: '" + name + "'\n" + "가격: " + price + '\n' + "재고: " + stock
+        + '\n' + "총 가격: "+calculatePrice()+ '\n';
   }
 }
