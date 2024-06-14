@@ -20,6 +20,10 @@ public class Product {
     stock = 0;
   }
 
+  public boolean isManyThan(int size) {
+    return stock >= size;
+  }
+
   public int calculatePrice() {
     return price.multiply(stock);
   }

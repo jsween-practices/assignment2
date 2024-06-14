@@ -2,7 +2,7 @@ package shop;
 
 import product.Product;
 
-public class ShoppingMall {
+public abstract class ShoppingMall {
   private final Products products;
 
   public ShoppingMall(int size) {
@@ -20,6 +20,8 @@ public class ShoppingMall {
   public void printProducts() {
     System.out.println(this+"\n\n\n\n\n");
   }
+
+  public abstract boolean checkOrderAvailability(Product product);
 
   @Override
   public String toString() {

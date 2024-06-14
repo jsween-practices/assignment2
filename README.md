@@ -15,9 +15,9 @@
    - 생성자에서 매개변수로 받은 크기만큼의 Product 배열을 생성할 것
    - 제품 추가(addProduct), 제품 삭제(removeProduct), 제품 목록 출력(displayProducts) 기능을 가진 메소드들을 오버로딩으로 생성할 것
    - 제품 추가 시 배열이 꽉 찼다면 기존 배열 크기의 2배로 새로운 배열을 생성하고 기존 상품들을 복사한 후 새 상품을 추가할 것
-5. ShoppingMall에 public abstract 메소드로 주문 가능 여부를 확인하는 checkOrderAvailability()를 선언할 것 (15점)
-   - 이를 상속받은 PremiumShoppingMall 클래스를 생성하고 checkOrderAvailability()를 오버라이딩 할 것
-   - PremiumShoppingMall의 checkOrderAvailability()는 재고량이 10개 이상일 때만 true를 리턴하고 그 외에는 false를 리턴할 것
+5. ShoppingMall에 public abstract 메소드로 주문 가능 여부를 확인하는 checkOrderAvailability(Product product)를 선언할 것 (15점)
+   - 이를 상속받은 PremiumShoppingMall 클래스를 생성하고 checkOrderAvailability(Product product)를 오버라이딩 할 것
+   - PremiumShoppingMall의 checkOrderAvailability(Product product)는 전달받은 상품의 재고량이 10개 이상일 때만 true를 리턴하고 그 외에는 false를 리턴할 것
 
 **실행해서 돌아가는 모습까지 캡처해서 올려주세요!!!**
 

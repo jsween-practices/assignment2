@@ -3,12 +3,13 @@ import product.Clothing;
 import product.Electronics;
 import product.Food;
 import product.Product;
+import shop.PremiumShoppingMall;
 import shop.ShoppingMall;
 
 public class Main {
 
   public static void main(String[] args) {
-    ShoppingMall shoppingMall = new ShoppingMall(2);
+    ShoppingMall shoppingMall = new PremiumShoppingMall(2);
     System.out.println("상품 없을 때");
     shoppingMall.printProducts(); // 상품없을 때 출력
 
@@ -68,5 +69,9 @@ public class Main {
     shoppingMall.deleteProduct("빅맥"); // 빅맥 제거
     shoppingMall.printProducts(); // 상품없을 때 출력
 
+    Product notAvailable = new Product("주문불가", 10, 5);
+    Product available = new Product("주문가능", 10, 10);
+    System.out.println("stock 5 주문 가능 여부: "+shoppingMall.checkOrderAvailability(notAvailable));
+    System.out.println("stock 10 주문 가능 여부: "+shoppingMall.checkOrderAvailability(available));
   }
 }
