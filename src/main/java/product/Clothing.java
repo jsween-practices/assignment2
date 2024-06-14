@@ -10,9 +10,9 @@ public class Clothing extends Product {
   }
 
   @Override
-  public int calculatePrice() {
+  public Price calculatePrice() {
     return switch (size) {
-      case XL, L -> price.raise(10).multiply(stock);
+      case XL, L -> super.calculatePrice().raise(10);
       default -> super.calculatePrice();
     };
   }

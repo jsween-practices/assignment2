@@ -12,9 +12,9 @@ public class Food extends Product {
   }
 
   @Override
-  public int calculatePrice() {
+  public Price calculatePrice() {
     if (expirationDate.checkExpiration()) {
-      return price.raise(-20).multiply(stock);
+      return super.calculatePrice().raise(-20);
     }
     return super.calculatePrice();
   }

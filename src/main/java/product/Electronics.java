@@ -10,9 +10,9 @@ public class Electronics extends Product {
   }
 
   @Override
-  public int calculatePrice() {
+  public Price calculatePrice() {
     if (brand.isApple()) {
-      return price.raise(20).multiply(stock);
+      return super.calculatePrice().raise(20);
     }
     return super.calculatePrice();
   }

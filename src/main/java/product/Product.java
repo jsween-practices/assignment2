@@ -5,8 +5,8 @@ import java.util.Objects;
 public class Product {
 
   private final String name;
-  protected final Price price;
-  protected final Integer stock;
+  private final Price price;
+  private final Integer stock;
 
   public Product(String name, int price, int stock) {
     this.name = name;
@@ -24,7 +24,7 @@ public class Product {
     return stock >= size;
   }
 
-  public int calculatePrice() {
+  public Price calculatePrice() {
     return price.multiply(stock);
   }
 
