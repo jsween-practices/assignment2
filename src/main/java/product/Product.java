@@ -44,7 +44,7 @@ public class Product {
 
   @Override
   public String toString() {
-    return "============\n" + "이름: '" + name + "'\n" + "가격: " + price + '\n' + "재고: " + stock
+    return "이름: '" + name + "'\n" + "가격: " + price + '\n' + "재고: " + stock
         + '\n' + "총 가격: "+calculatePrice()+ '\n';
   }
 }

@@ -8,7 +8,7 @@ import shop.ShoppingMall;
 public class Main {
 
   public static void main(String[] args) {
-    ShoppingMall shoppingMall = new ShoppingMall();
+    ShoppingMall shoppingMall = new ShoppingMall(2);
     System.out.println("상품 없을 때");
     shoppingMall.printProducts(); // 상품없을 때 출력
 

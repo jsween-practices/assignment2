@@ -1,13 +1,13 @@
 package shop;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 import product.Product;
 
 public class ShoppingMall {
+  private final Products products;
 
-  private final List<Product> products = new ArrayList<>();
+  public ShoppingMall(int size) {
+    this.products = new Products(size);
+  }
 
   public void postProduct(Product product) {
     products.add(product);
@@ -25,7 +25,6 @@ public class ShoppingMall {
   public String toString() {
     if (products.isEmpty())
       return "쇼핑몰이 비었습니다.";
-    return "상품 목록\n\n" + products.stream().map(Product::toString).collect(Collectors.joining("\n"));
-
+    return "상품 목록" + products;
   }
 }
