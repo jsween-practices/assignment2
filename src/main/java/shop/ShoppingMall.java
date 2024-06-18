@@ -9,12 +9,15 @@ public abstract class ShoppingMall {
     this.products = new Products(size);
   }
 
-  public void postProduct(Product product) {
+  public void addProduct(Product product) {
     products.add(product);
   }
+  public void removeProduct(String name) {
+    removeProduct(new Product(name));
+  }
 
-  public void deleteProduct(String name) {
-    products.remove(new Product(name));
+  public void removeProduct(Product product) {
+    products.remove(product);
   }
 
   public void printProducts() {
