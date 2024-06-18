@@ -13,8 +13,8 @@ class ProductTest {
     Product sample = new Product("샘플", 100, 3);
     Product sample2 = new Product("샘플2", 100, 5);
     Product sample3 = new Product("샘플3", 500, 5);
-    assertEquals(sample.calculatePrice(), 300);
-    assertEquals(sample2.calculatePrice(), 500);
-    assertEquals(sample3.calculatePrice(), 2500);
+    assertEquals(sample.calculatePrice(), 100);
+    assertEquals(sample2.calculatePrice(), 100);
+    assertEquals(sample3.calculatePrice(), 500);
   }
 }

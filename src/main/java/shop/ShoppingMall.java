@@ -30,6 +30,6 @@ public abstract class ShoppingMall {
   public String toString() {
     if (products.isEmpty())
       return "쇼핑몰이 비었습니다.";
-    return "상품 목록" + products;
+    return "상품 목록\n" + products;
   }
 }

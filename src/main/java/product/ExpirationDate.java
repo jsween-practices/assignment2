@@ -16,4 +16,9 @@ class ExpirationDate {
     Period between = Period.between(LocalDate.now(), date);
     return between.get(ChronoUnit.DAYS) <= EXPIRATION_DURATION;
   }
+
+  @Override
+  public String toString() {
+    return ""+date;
+  }
 }

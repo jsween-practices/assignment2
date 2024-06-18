@@ -13,9 +13,9 @@ class ClothingTest {
     Clothing m = new Clothing("M", 100, 2, "M");
     Clothing s = new Clothing("S", 100, 2, "S");
     Clothing xs = new Clothing("XS", 100, 2, "XS");
-    assertEquals(m.calculatePrice(), 200);
-    assertEquals(s.calculatePrice(), 200);
-    assertEquals(xs.calculatePrice(), 200);
+    assertEquals(m.calculatePrice(), 100);
+    assertEquals(s.calculatePrice(), 100);
+    assertEquals(xs.calculatePrice(), 100);
   }
 
   @Test
@@ -23,7 +23,7 @@ class ClothingTest {
   void calculatePriceRaise() {
     Clothing l = new Clothing("L", 100, 2, "L");
     Clothing xl = new Clothing("XL", 100, 2, "XL");
-    assertEquals(l.calculatePrice(), 220);
-    assertEquals(xl.calculatePrice(), 220);
+    assertEquals(l.calculatePrice(), 110);
+    assertEquals(xl.calculatePrice(), 110);
   }
 }

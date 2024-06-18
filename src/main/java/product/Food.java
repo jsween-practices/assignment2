@@ -18,4 +18,9 @@ public class Food extends Product {
     }
     return super.calculatePrice();
   }
+
+  @Override
+  public String toString() {
+    return super.toString()+"유통기한: "+expirationDate+"\n";
+  }
 }

@@ -25,7 +25,7 @@ public class Product {
   }
 
   public Price calculatePrice() {
-    return price.multiply(stock);
+    return price;
   }
 
   public boolean equals(Object o) {

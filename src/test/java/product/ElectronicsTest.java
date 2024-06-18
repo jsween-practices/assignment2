@@ -12,13 +12,13 @@ class ElectronicsTest {
   @DisplayName("APPLE이면 가격에 20% 추가")
   void calculatePrice() {
     Electronics apple = new Electronics("apple", 100, 2, "Apple");
-    assertEquals(apple.calculatePrice(), 240);
+    assertEquals(apple.calculatePrice(), 120);
   }
 
   @Test
   @DisplayName("APPLE이 아니면 그대로")
   void calculatePriceOther() {
     Electronics apple = new Electronics("other", 100, 2, "Samsung");
-    assertEquals(apple.calculatePrice(), 200);
+    assertEquals(apple.calculatePrice(), 100);
   }
 }
