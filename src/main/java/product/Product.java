@@ -4,9 +4,33 @@ import java.util.Objects;
 
 public class Product {
 
-  private final String name;
-  private final Price price;
-  private final Integer stock;
+  private String name;
+  private Price price;
+  private Integer stock;
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Price getPrice() {
+    return price;
+  }
+
+  public void setPrice(Price price) {
+    this.price = price;
+  }
+
+  public Integer getStock() {
+    return stock;
+  }
+
+  public void setStock(Integer stock) {
+    this.stock = stock;
+  }
 
   public Product(String name, int price, int stock) {
     this.name = name;
@@ -51,4 +75,5 @@ public class Product {
     return "이름: '" + name + "'\n" + "가격: " + price + '\n' + "재고: " + stock
         + '\n' + "총 가격: "+calculatePrice()+ '\n';
   }
+
 }
