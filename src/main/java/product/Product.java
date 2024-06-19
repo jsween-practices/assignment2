@@ -73,7 +73,7 @@ public class Product {
   @Override
   public String toString() {
     return "이름: '" + name + "'\n" + "가격: " + price + '\n' + "재고: " + stock
-        + '\n' + "총 가격: "+calculatePrice()+ '\n';
+        + '\n' + "할인 적용 가격: "+calculatePrice()+ '\n';
   }
 
 }
